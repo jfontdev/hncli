@@ -20,7 +20,7 @@ This tool is built for:
 
 ## 📦 Requirements
 
-- Ruby 3.x or newer recommended.
+- Ruby 3.4 or newer recommended.
 - Gems:
   - `thor`
   - `json`
@@ -35,6 +35,27 @@ This tool is built for:
 ./bin/hn.sh top 5
 ```
 🔹 This will print the top 5 stories from Hacker News with relevant information.
+
+## 🧪 Testing
+
+This project uses [RSpec](https://rspec.info/) for tests.
+
+To run all tests:
+
+```bash
+bundle exec rspec
+```	
+
+### ⚠️ Ruby Version Compatibility
+Tests that assert exact CLI output (e.g., via puts) currently assume Ruby 3.4+ formatting for Hashes.
+
+Example difference:
+
+Ruby 3.3: {"Title"=>"Hello"}
+
+Ruby 3.4+: {"Title" => "Hello"}
+
+If you're using Ruby 3.3, some output-based tests (like the top command) may fail due to formatting differences. We recommend running tests under Ruby 3.4 until we improve cross-version formatting consistency.
 
 ## 🗂 Directory Structure
 

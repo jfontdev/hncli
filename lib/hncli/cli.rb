@@ -47,7 +47,7 @@ module Hncli
          author = story_data["by"]
          score = story_data["score"]
          url = story_data["url"] || "(no URL)"
-         time =  Time.at(story_data["time"])
+         time =  Time.at(story_data["time"]).utc
 
          story = {"Title"=>title,"Author" => author, "Score" => score, "URL" => url, "Published at" => time}
 

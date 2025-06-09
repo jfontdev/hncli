@@ -42,7 +42,7 @@ RSpec.describe "Hncli CLI top command" do
        "Author" => "int_tester",
        "Score" => 123,
        "URL" => "https://example.com/test-story",
-       "Published at" => 2025-06-09 16:42:43 +0200}
+       "Published at" => 2025-06-09 14:42:43 UTC}
 
     OUT
 
